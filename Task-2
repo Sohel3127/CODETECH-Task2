@@ -1,0 +1,82 @@
+//Task 2
+
+#include<iostream>
+
+using namespace std;
+int main(){
+            string questions[] = {"1.What is the capital of India?: ",
+                                 "2.What is the national bird of India?: ",
+                                 "3.What is the national animal of India?: ",
+                                 "4.Who is the prime minister of India?: ",
+                                 "5.Who invented C++?:",
+                                 "6.How many continents of are there in world?: ",
+                                 "7.Who is known as father of computers?:",
+                                 "8.Who is the Ceo of Apple?:",
+                                 "9.What is the largest mammel on Earth?:",
+                                 "10.Who was the first person to be in space?"};
+            
+            string options[][4] ={{"A. Mumbai", "B. Kolkata", "C. Delhi", "D. Bengaluru "},
+                                 {"A. Peacock", "B. Crow", "C. Sparrow", "D. Hen"},
+                                 {"A. Lion", "B. Royal Bengal Tiger", "C. Elephant", "D. Cheetah"},
+                                 {"A. Narendra Modi", "B. Rahul Gandhi", "C. Dr.Monmohan Singh", "D. Dropadi Murmu"},
+                                 {"A. Bjarne Stroustrup", "B. Kronaud Zuse", "C. Ada Lovelace", "D. Dennis Ritchie "},
+                                 {"A. 4 ", "B. 8 ", "C. 6", "D. 7"},
+                                 {"A. Charles Babbage", "B. Ada Lovelace", "C. Steve Jobs", "D. Bill Gates"},
+                                 {"A. Jeff Bezos", "B. Tim Cook", "C. Sundar Pichai", "D. Satya Nadela"},
+                                 {"A. Elephant", "B. Anaconda", "C. Blue Whale", "D. Girrafe"},
+                                 {"A. Neil Armstrong", "B. Edwin Aldrin", "C. Yuri Gagarin", "D. Rakesh Sharma"}};
+            
+            char answerKey[] = {'C', 'A', 'B', 'A', 'A', 'D', 'A', 'B', 'C', 'C'};
+
+            int size = sizeof(questions)/sizeof(questions[0]);
+            char guess; 
+            int score;
+            
+            for(int i=0; i<size; i++){
+                cout<< "------------------------\n";
+                cout<< questions[i]<<'\n';
+                cout<< "------------------------\n";
+
+                for(int j=0; j< sizeof(options[i])/sizeof(options[1][0]); j++){
+                    cout<<options[i][j]<<'\n';
+
+                }
+
+                cin>>guess;
+                guess=toupper(guess);
+
+                if(guess == answerKey[i]){
+                        cout<<"CORRECT\n";
+                        score++;
+
+                }
+                else{
+                    cout<<"WRONG!\n";
+                    cout<<"Answer: "<<answerKey[i]<<'\n';
+                }
+
+            }
+            cout<< "------------------------\n";                           
+            cout<<"         RESULTS         \n";
+            cout<< "------------------------\n";
+            cout<<"  CORRECT GUESS "<<score<<"\n";
+            cout<<"# of QUESTIONS: "<<size<<"\n";
+            cout<<" SCORE "<<(score/(double)size)*100<<"%"<<"\n";
+        int c=(score/(double)size)*100;
+        if(c==100){
+            cout<<"PERFECTION\n";
+        }
+        if(c==90){
+            cout<<"EXCELLENT\n";
+        
+        }
+        if(c==80){
+            cout<<"VERY GOOD\n";
+        }
+        if(c<80){
+            cout<<"TRY BETTER NEXT TIME";
+        }
+
+
+    return 0;
+ }

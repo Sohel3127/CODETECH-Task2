@@ -3,7 +3,7 @@ Name: SOHEL SOREN
 Company: CODTECH IT SOLUTIONS
 ID: CT4CPP2876
 Domain: C++
-Duration: May to June 2024 Mentor: Neela Santhosh Kumar
+Duration: June to July 2024 Mentor: Neela Santhosh Kumar
 
 
 Overview of the Project
